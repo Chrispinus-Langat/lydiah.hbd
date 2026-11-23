@@ -264,13 +264,13 @@ const CFG={
 /* ======================= */
 const $=s=>document.querySelector(s),scenes=[...document.querySelectorAll('.scene')],N=scenes.length,MOB=innerWidth<768,RM=matchMedia('(prefers-reduced-motion: reduce)').matches,esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 $('#rs').innerHTML=CFG.reasons.map((r,i)=>`<div class="glass p-4 md:p-6 in" style="--i:${2+i}"><div class="script text-3xl text-[var(--rose)]">${i+1}</div><h3 class="serif text-xl md:text-2xl">${esc(r[0])}</h3><p class="text-xs md:text-sm opacity-70 mt-1">${esc(r[1])}</p></div>`).join('');
-const M_PA='media/an1.jpeg',M_PB='media/snshn.jpeg',M_P1='media/mem1.mp4',M_P2='media/mem2.mp4',V_1='media/anneth_memory_video_01.mp4',V_2='media/mem2.mp4';
+const M_PA='media/an1.jpeg',M_PB='media/snshn.jpeg',M_P1='media/mem1.mp4',M_P2='media/mem2.mp4',V_1='media/mem1.mp4',V_2='media/mem2.mp4';
 const MEDIA=[{t:'photo',src:M_PA,pos:'55% 22%'},{t:'photo',src:M_PB,pos:'50% 34%'},{t:'video',poster:M_P1,v:V_1,pos:'50% 40%'},{t:'video',poster:M_P2,v:V_2,pos:'50% 40%'}];
 $('#pols').innerHTML=CFG.memories.map((m,i)=>{const d=MEDIA[i];return `<button class="pol" style="--r:${[-5,3,-3,4][i]}deg" data-i="${i}" aria-label="Open memory: ${esc(m.short)}"><div class="ph" style="background-image:url(${d.t==='photo'?d.src:d.poster});background-position:${d.pos}">${d.t==='video'?'<span class="pl" aria-hidden="true">\u25b6</span>':''}</div><p>${esc(m.short)}</p></button>`}).join('');
 const HER='media/hero.jpeg';
 $('#her').src=HER;
 const ALBUM_VIDEO='media/Anneth.mp4';
-const REEL_PHOTOS=['media/mem1.mp4','media/mem2.mp4','media/anneth_reel_03.webp','media/mem1.mp4','media/mem1.mp4','media/anneth_reel_06.webp'];
+const REEL_PHOTOS=['media/mem1.mp4','media/mem2.mp4','media/anneth_reel_03.webp','media/mem2.mp4','media/mem2.mp4','media/anneth_reel_06.webp'];
 const td=new Date(),hr=td.getHours();
 $('#dt').textContent=(td.getDate()==CFG.birthday.day&&td.getMonth()==CFG.birthday.month-1)?'Today is your day \u2665':CFG.date;
 $('#kick').textContent=hr<12?'A beautiful morning to celebrate you':hr<18?'This afternoon belongs to you':'The stars are out for your birthday';
